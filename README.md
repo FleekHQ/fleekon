@@ -5,7 +5,7 @@
 
 # Fleekon - Fleek's icon toolkit
 
-Curated list of brand icons generated with [icomoon app](https://icomoon.io/app), used accross Fleek React apps.
+Curated list of brand icons generated with [Icomoon App](https://icomoon.io/app), used accross Fleek React apps.
 
 ## 📦 Install
 
@@ -16,7 +16,6 @@ yarn add @fleekHQ/fleekon
 ## 🤔 Use
 
 ```js
-// icon.js
 import React from "react";
 import Fleekon from "@fleekHQ/fleekon";
 
@@ -30,9 +29,14 @@ const App = () => {
 };
 ```
 
-## Curation
+## 👄 Curation
 
-Create or edit Icon packages in the [Icomoon app](https://icomoon.io/app) by using or downloading the `selection.json` file.
+Create or edit Icon packages in the [Icomoon App](https://icomoon.io/app) by using or downloading the `selection.json` file.
 
 In Fleekon, update or add a new package by choosing a meaningful name.
 
+## References
+
+[IcoMoon app](https://icomoon.io/app)
+
+[Forked React-IcoMoon](https://github.com/aykutkardas/React-IcoMoon)
