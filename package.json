@@ -1,0 +1,23 @@
+{
+  "name": "fleekcon",
+  "version": "0.0.1",
+  "description": "Fleek icon toolkit",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:FleekHQ/fleekon.git"
+  },
+  "author": {
+    "name": "Helder",
+    "email": "helder@fleek.co"
+  },
+  "dependencies": {
+    "@types/react": "^17.0.13",
+    "react": "^17.0.2"
+  }
+}
