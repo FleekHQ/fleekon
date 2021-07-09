@@ -56,7 +56,7 @@ export const Collection = () => (
   <>
     {
       iconNames.map((name) => (
-        <IconWrap>
+        <IconWrap key={name}>
           <Column>
             <StoryIcon
               collectionName="Plug"
