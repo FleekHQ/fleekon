@@ -2,39 +2,49 @@ import React from 'react';
 import Icomoon, { IconSet } from './icomoon';
 import Plug from './collections/plug.json';
 
-type Collection = 'Plug';
+type CollectionName = 'Plug';
 
-const getIconList = (iconSet: IconSet) => {
-  if (!iconSet || !Array.isArray(iconSet.icons)) return;
-
+export const getIconList = (iconSet: IconSet) => {
+  if (!iconSet || !Array.isArray(iconSet.icons)) return [];
   return iconSet.icons.map((icon) => icon.properties.name);
 };
 
+// eslint-disable-next-line consistent-return
 const getIconSet = (collection: string) => {
-  if (collection == 'Plug') {
-    return Plug;
+  if (collection === 'Plug') {
+    return (Plug as IconSet);
   }
+};
+
+export interface FleekonProps {
+  className?: string,
+  collectionName: CollectionName,
+  color: string,
+  icon: string,
+  size: string,
 }
 
 const Fleekon = ({
-  collection,
+  className,
+  collectionName,
+  color,
   icon,
-}: {
-  collection: Collection,
-  icon: string,
-}) => {
-  let iconSet = getIconSet(collection);
+  size,
+}: FleekonProps) => {
+  const iconSet = getIconSet(collectionName);
 
-  return iconSet && (
-    <Icomoon
-      iconSet={iconSet}
-      icon={}
-      color={}
-      size={}
-      className={}
-      style={}
-    />
-  );
+  return (iconSet
+    && (
+      <Icomoon
+        iconSet={iconSet}
+        icon={icon}
+        color={color}
+        size={size}
+        className={className}
+      />
+    )
+  )
+  || <>Icon missing!</>;
 };
 
 export default Fleekon;

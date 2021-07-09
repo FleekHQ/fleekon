@@ -18,9 +18,9 @@ export type IconSet = {
 type Style = Record<string, string | number>;
 
 const style: Style = {
-  display: "inline-block",
-  stroke: "currentColor",
-  fill: "currentColor",
+  display: 'inline-block',
+  stroke: 'currentColor',
+  fill: 'currentColor',
 };
 
 const IcoMoon: FunctionComponent<{
@@ -44,7 +44,7 @@ const IcoMoon: FunctionComponent<{
   if (!iconSet || !icon) return null;
 
   const currentIcon = iconSet.icons.find(
-    (item) => item.properties.name === icon
+    (item) => item.properties.name === icon,
   );
 
   if (!currentIcon) return null;
@@ -54,13 +54,15 @@ const IcoMoon: FunctionComponent<{
     style.height = size;
   }
 
+  // eslint-disable-next-line no-param-reassign
   props.style = {
     ...(removeInlineStyle ? {} : style),
     ...(props.style || {}),
   };
 
-  const { width = "1024" } = currentIcon.icon;
+  const { width = '1024' } = currentIcon.icon;
 
+  // eslint-disable-next-line no-param-reassign
   props.viewBox = `0 0 ${width} 1024`;
 
   const paths = currentIcon.icon.paths.map((path, index) => {
@@ -72,12 +74,12 @@ const IcoMoon: FunctionComponent<{
 
     return PathComponent
       ? createElement(PathComponent, pathProps)
-      : createElement("path", pathProps);
+      : createElement('path', pathProps);
   });
 
   return SvgComponent
     ? createElement(SvgComponent, props, paths)
-    : createElement("svg", props, paths);
+    : createElement('svg', props, paths);
 };
 
 export default IcoMoon;
