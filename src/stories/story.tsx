@@ -2,27 +2,26 @@
 import React from 'react';
 
 import { Story, Meta } from '@storybook/react';
+import Fleekon, { FleekonProps } from '..';
 
-import Fleekon, { FleekonProps } from '.';
-
-export default {
+export default ({
+  title,
+  iconNames,
+}: {
+  title: string,
+  iconNames: string[],
+}) => ({
   component: Fleekon,
-  title: 'Fleekon',
+  title,
   argTypes: {
-    collectionName: {
-      options: ['Plug'],
-      control: {
-        type: 'select',
-      },
-    },
     icon: {
-      options: ['home', 'newspaper', 'pen', 'pencil'],
+      options: [...iconNames],
       control: {
         type: 'select',
       },
     },
   },
-} as Meta;
+} as Meta);
 
 const Template: Story<FleekonProps> = ({
   collectionName,
