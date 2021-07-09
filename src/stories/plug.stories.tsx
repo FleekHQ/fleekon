@@ -11,6 +11,16 @@ const IconWrap = styled('span', {
   borderRadius: '8px',
   padding: '12px 12px 6px',
   margin: '6px',
+  cursor: 'pointer',
+  '&:hover': {
+    '& svg': {
+      color: 'deepskyblue',
+    },
+  },
+
+  '& svg': {
+    transition: 'color 0.3s',
+  },
 });
 
 const Column = styled('div', {
