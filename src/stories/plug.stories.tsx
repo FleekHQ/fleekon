@@ -48,7 +48,7 @@ export const Icon = StoryIcon;
 Icon.args = {
   collectionName: 'Plug',
   color: 'black',
-  icon: 'home',
+  icon: 'trash',
   size: '32px',
 };
 
