@@ -9,9 +9,8 @@
       "esnext"
     ],
     "allowSyntheticDefaultImports": true,
-    "outDir": "dist/",
+    "outDir": "lib/esm",
     "declaration": true,
-    "declarationDir": "dist/",
     "sourceMap": true,
     "strict": true,
     "noImplicitAny": true,
@@ -32,6 +31,7 @@
   ],
   "exclude": [
     ".storybook",
-    "node_modules"
+    "node_modules",
+    "lib",
   ]
 }
