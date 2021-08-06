@@ -13,7 +13,9 @@ Curated list of brand icons generated with [Icomoon App](https://icomoon.io/app)
 yarn add @fleekhq/fleekon
 ```
 
-The package is under the github package registry [@FleekHQ](https://github.com/FleekHQ) organisation. You need to have NPM configured to fetch packages under the @FleekHQ scope, if you haven't learned how to, read the docs [here](docs/packages.md).
+The package is under the github package registry [@FleekHQ](https://github.com/FleekHQ) organisation.
+
+You need to have NPM configured to fetch packages under the [@FleekHQ](https://github.com/FleekHQ) scope, so if you haven't learned how to, read the docs [here](docs/packages.md).
 
 ## 🤔 Use
 
