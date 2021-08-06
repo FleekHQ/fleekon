@@ -10,8 +10,10 @@ Curated list of brand icons generated with [Icomoon App](https://icomoon.io/app)
 ## 📦 Install
 
 ```
-yarn add @fleekHQ/fleekon
+yarn add @fleekhq/fleekon
 ```
+
+The package is under the github package registry [@FleekHQ](https://github.com/FleekHQ) organisation. You need to have NPM configured to fetch packages under the @FleekHQ scope, if you haven't learned how to, read the docs [here](docs/packages.md).
 
 ## 🤔 Use
 
