@@ -75,35 +75,18 @@ import React from "react";
 import Fleekon from "@fleekHQ/fleekon";
 import Plug from 'plug.json';
 
-const IconCollection = ({
-  collection,
-}) => {
-  const IconCreator = ({
-    icon,
-    size,
-    color,
-    className,
-  }) => (
-    <Fleekon
-      collection={collection}
-      icon={icon}
-      size={size}
-      color={color}
-      className={className}
-    />
-  );
-
-  return IconCreator;
-}
-
 export const Icon = ({
   icon,
   size,
   color,
   className,
 }) => (
-  <IconCollection
+  <Fleekon
     collection={Plug}
+    icon={icon}
+    size={size}
+    color={color}
+    className={className}
   />
 );
 ```
