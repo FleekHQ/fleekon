@@ -46,20 +46,20 @@ export default CreateStory({
 export const Icon = StoryIcon;
 
 Icon.args = {
-  collectionName: 'Plug',
+  collection: Plug,
   color: 'black',
   icon: 'trash',
   size: '32px',
 };
 
-export const Collection = () => (
+export const CollectionList = () => (
   <>
     {
       iconNames.map((name) => (
         <IconWrap key={name}>
           <Column>
             <StoryIcon
-              collectionName="Plug"
+              collection={Plug}
               color="black"
               icon={name}
               size="32px"

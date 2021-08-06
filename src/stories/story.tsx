@@ -24,13 +24,13 @@ export default ({
 } as Meta);
 
 const Template: Story<FleekonProps> = ({
-  collectionName,
+  collection,
   color,
   icon,
   size,
 }) => (
   <Fleekon
-    collectionName={collectionName}
+    collection={collection}
     color={color}
     icon={icon}
     size={size}
@@ -38,10 +38,3 @@ const Template: Story<FleekonProps> = ({
 );
 
 export const Icon = Template.bind({});
-
-Icon.args = {
-  collectionName: 'Plug',
-  color: 'black',
-  icon: 'home',
-  size: '32px',
-};
