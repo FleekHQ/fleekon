@@ -1,2 +1,21 @@
-/node_modules
+# dependencies
+node_modules
+
+# production
 /dist
+
+# misc
+__PROJECT
+.DS_Store
+.coverage
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+.eslintcache
+
+# IDEs
+/.idea
+/.vscode
+/.history
