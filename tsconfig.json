@@ -1,8 +1,13 @@
 {
   "compilerOptions": {
+    "skipLibCheck": true,
     "target": "es2016",
     "jsx": "react",
-    "lib": ["esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowSyntheticDefaultImports": true,
     "outDir": "dist/",
     "declaration": true,
@@ -22,7 +27,11 @@
   "include": [
     "src/**/*"
   ],
+  "typeRoots": [
+    "./node_modules/@types"
+  ],
   "exclude": [
+    ".storybook",
     "node_modules"
   ]
 }

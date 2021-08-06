@@ -1,9 +1,10 @@
 {
   "name": "@fleekhq/fleekon",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Fleek icon toolkit",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "module": "./dist/esm/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
