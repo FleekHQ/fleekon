@@ -1,12 +1,16 @@
 {
   "compilerOptions": {
+    "skipLibCheck": true,
     "target": "es2016",
     "jsx": "react",
-    "lib": ["esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowSyntheticDefaultImports": true,
-    "outDir": "dist/",
+    "outDir": "lib/esm",
     "declaration": true,
-    "declarationDir": "dist/",
     "sourceMap": true,
     "strict": true,
     "noImplicitAny": true,
@@ -22,7 +26,12 @@
   "include": [
     "src/**/*"
   ],
+  "typeRoots": [
+    "./node_modules/@types"
+  ],
   "exclude": [
-    "node_modules"
+    ".storybook",
+    "node_modules",
+    "lib",
   ]
 }
