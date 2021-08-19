@@ -1,4 +1,4 @@
-import { createElement, FunctionComponent } from 'react';
+import React, { createElement, FunctionComponent } from 'react';
 
 type IconSetItem = {
   properties: {
@@ -23,6 +23,16 @@ const style: Style = {
   fill: 'currentColor',
 };
 
+const ErrorFound = ({
+  name,
+}: {
+  name: string,
+}) => (
+  <span>
+    {`Oops! Missing ${name}`}
+  </span>
+);
+
 const IcoMoon: FunctionComponent<{
   iconSet: IconSet;
   icon: string;
@@ -41,13 +51,13 @@ const IcoMoon: FunctionComponent<{
   PathComponent,
   ...props
 }) => {
-  if (!iconSet || !icon) return null;
+  if (!iconSet || !icon) return <ErrorFound name="iconSet or icon" />;
 
   const currentIcon = iconSet.icons.find(
     (item) => item.properties.name === icon,
   );
 
-  if (!currentIcon) return null;
+  if (!currentIcon) return <ErrorFound name="currentIcon" />;
 
   if (size) {
     style.width = size;
